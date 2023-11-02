@@ -1,0 +1,183 @@
+
+.container-hero{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(-45deg, #30009f, #010003, #010003, #30009f);
+	background: linear-gradient(-9deg, #30009f, #010003, #010003, #30009f);
+}
+
+
+
+
+	
+
+.hero-title {
+	background: none;
+	color: white;
+	font-size: 4rem;
+	text-align: center;
+	line-height: 0.9;
+	padding-top: 12rem;
+	animation: initAnimate 2s ease;
+}
+
+.description-hero{
+	color: #aaa;
+	width: 80%;
+	text-align: center;
+	padding-top: 2rem;
+	animation: initAnimate 2s ease;
+
+}
+
+
+.container-images{
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 3rem;
+	gap: 3rem;
+	padding-bottom: 10rem;
+}
+
+.images{
+	width: 350px;
+	height: 200px;
+	opacity: .7;
+	transform: scale(0.9);
+	animation: initAnimate 2s ease;
+
+
+	&&:hover{
+		opacity: 1;
+		transform: scale(1);
+		transition: 0.3s ease;
+	}
+}
+
+
+@keyframes initAnimate {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  background-position: .2;
+	}
+	100% {
+	  background-position: .6;
+	}
+  }
+
+  @media (max-width: 1560px) {
+	
+
+	.container-hero{
+
+		padding-top: 1rem;
+	}
+
+	.hero-title{
+		font-size: 4rem;
+	}
+
+	.images{
+		width: 250px;
+		height: 200px;
+	}
+  }
+
+
+  @media (max-width: 1200px) {
+
+	.hero-title{
+		font-size: 3rem;
+		padding-top: 4rem;
+	}
+
+	.container-hero{
+		padding-top: 4rem;
+	}
+
+	.container-images{
+		margin-top: 1rem;
+		gap: 1rem;
+		width: 100%;
+		padding-bottom: 5rem;
+	}
+
+	.images{
+		width: 300px;
+	}
+
+
+  }
+
+
+  @media (max-width: 900px) {
+	
+	.hero-title{
+		font-size: 2.5rem;
+	}
+
+  }
+
+
+  @media (max-width: 650px) {
+
+	.logo{
+		font-size: 1.5rem;
+	}
+	
+	.images{
+		width: 90%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.container-hero{
+		padding-top: 2rem;
+	}
+
+	.container-images{
+		padding-bottom: 3rem;
+	}
+  }
+
+  
+
+
+
+
+
+
+  @media (max-width: 479px) {
+	.hero-title{
+		font-size: 2rem;
+	}
+
+	.description-hero{
+		font-size: 1rem;
+		width: 100%;
+	}
+
+	.images{
+		width: 90%;
+		height: 150px;
+		object-fit: cover;
+
+	}
+
+	.container-hero{
+		padding-top: 2rem;
+	}
+
+	.container-images{
+		padding-bottom: 2rem;
+	}
+}
+
+
+  

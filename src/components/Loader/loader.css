@@ -1,0 +1,16 @@
+.loading {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 2rem;
+    border: 10px solid #dbdada;
+    border-top: 10px solid #212325;
+    border-radius: 100%;
+    animation: loader 1s infinite linear;
+  }
+  
+  @keyframes loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }

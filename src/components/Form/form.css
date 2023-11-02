@@ -1,0 +1,143 @@
+.contenedor-contact{
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 2rem;
+    margin: auto;
+    padding-top: 8rem;
+    padding-top: 20vh;
+    width: 100%;
+
+}
+
+.info-form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(51, 0, 110);
+    background: linear-gradient(90deg, #30009f 0%, #340159 100%);
+    
+}
+
+.icons{
+
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-img{
+    width: 2rem;
+    transition: all 100ms ease;
+
+    &&:hover{
+        transform: scale(1.2);
+    }
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: white;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.container-input:first-child{
+    margin-top: 0;
+}
+
+.label{
+    color: black;
+}
+
+.input{
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+textarea{
+    border: none;
+    border: 1px solid #999;
+
+}
+
+.btn-form{
+    margin-top: 1rem;
+    color: #fafafa;
+    padding: .5rem 2rem;
+    border: none;
+    background-color: #42025f;
+    background: linear-gradient(90deg, #30009f 0%, #340159 100%);
+
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+
+    &&:hover{
+        background-color: #320149;
+        background: linear-gradient(90deg, #2b008e 0%, #300151 100%);
+
+    }
+}
+
+.title-form{
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+@media (max-width: 850px) {
+   .contenedor-contact{
+    max-width: 670px;
+   }
+}
+
+
+@media (max-width: 680px) {
+    .contenedor-contact{
+        max-width: 90%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .input{
+        padding: 5px 5px;
+
+    }
+    .info-form{
+        width: 100%;
+
+    }
+
+    .icon-img{
+        width: 1.5rem;
+    }
+    .form{
+        width: 100%;
+        padding: 1rem;
+    }
+
+   textarea{
+    height: 50px;
+   }
+
+   
+}

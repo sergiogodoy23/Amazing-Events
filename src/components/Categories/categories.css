@@ -1,0 +1,24 @@
+.container-categories{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.label-categorie{
+    color: white;
+    display: flex;
+    gap: 1px;
+}
+
+input{
+    accent-color: #350197;
+}
+
+
+@media (max-width: 600px) {
+    .container-categories{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+}

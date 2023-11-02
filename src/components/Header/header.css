@@ -1,0 +1,52 @@
+.head{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    /* backdrop-filter: blur(20px); */
+    z-index: 999;
+}
+
+
+.logo{
+    margin-left: 5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.logo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.background{
+    background-color: #4506a3;
+}
+
+@media (max-width: 1200px) {
+
+
+    .logo{
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .logo{
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 479px) {
+    .logo{
+        font-size: 1rem;
+    }
+}

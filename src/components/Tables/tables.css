@@ -1,0 +1,51 @@
+
+
+table{
+    border: 1px solid #888;
+    background-color: #fafafa;
+    color: rgb(19, 19, 19);
+    border-collapse:collapse ;
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+  
+  td{
+    border: 1px solid #888;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  
+  tr{
+    border: 1px solid #888;
+  }
+  
+  .estadisticas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  th{
+    padding: 0.5rem 1rem;
+    border: 1px solid #888;
+    color: #000;
+  }
+
+  .container-tables{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem;
+  }
+
+  .container-section-tables{
+    padding: 10rem 0rem;
+  }

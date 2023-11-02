@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+  background-color: #111111;
+ 
+}
+
+ body {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+  
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.MainContent {
+  flex: 1;
+}
+
+Footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+}
+
+
+.container-notfound{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15rem;
+;
+}
+
+.title-found{
+  font-size: 10rem;
+  background: #30009F;
+background: linear-gradient(to right, #30009F 0%, #340159 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+
+.description-found{
+  color: #aaa;
+}
+
+.btn-notfound{
+  background-color: black;
+  background: linear-gradient(90deg, #30009f 0%, #340159 100%);
+  border: none;
+  padding: 10px 20px;
+  margin-top: .5rem;
+}
+
+.link-notfound{
+  text-decoration: none;
+  color: white;
+}
+
+
+@media (max-width: 380px) {
+  .title-found{
+    font-size: 6rem;
+  }
+
+  .container-notfound{
+    padding-top: 10rem;
+  }
+
+  .btn-notfound{
+    padding: 5px 10px;
+  }
+  
+}
+
+
+
+
+
+
+

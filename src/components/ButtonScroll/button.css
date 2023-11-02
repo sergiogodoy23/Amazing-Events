@@ -1,0 +1,15 @@
+.btn-scroll{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: .6rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    background-color: #4a03ed;
+    background: linear-gradient(to right, #30009F 0%, #340159 100%);
+
+}
+

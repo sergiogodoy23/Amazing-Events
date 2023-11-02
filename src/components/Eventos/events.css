@@ -1,0 +1,126 @@
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-events{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     grid-gap: 40px;
+     padding: 10px 0;
+     place-items: center;
+     margin-bottom: 15rem;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 2px rgba(56, 56, 56, 0.75);
+-webkit-box-shadow: 1px 1px 3px 1px rgba(65, 65, 65, 0.75);
+-moz-box-shadow: 1px 1px 3px 2px rgba(255, 255, 255, 0.75);
+
+    &&:hover{
+        transform: scale(1.1);
+        transition: all 100ms ease-in-out;
+        box-shadow: 2px -1px 16px 9px rgba(70,4,105,0.93);
+  -webkit-box-shadow: 2px -1px 16px 9px rgba(70,4,105,0.93);
+  -moz-box-shadow: 2px -1px 16px 9px rgba(70,4,105,0.93);
+      }
+}
+
+
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    max-width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    box-shadow: 0px 1px 0px 0px  #646464;
+}
+
+.info-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px
+}
+
+.card-title{
+    margin-top: 5px;
+}
+
+.card-description{
+    width: 100%;
+    color: #888;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+
+.card-price{
+    margin-bottom: 10px;
+}
+
+.btn-event {
+    width: 50%;
+    margin: auto;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: #3b0261;
+    background: rgb(57,10,122);
+background: linear-gradient(90deg, #30009f 0%, #340159 100%);
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    &&:hover{
+        background: linear-gradient(90deg, #270083 0%, #260041 100%);
+        cursor: pointer;
+    }
+
+}
+
+.link-event{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+
+@media (max-width: 900px) {
+    
+    .container-events{
+        width: 90%;
+        grid-gap: 1rem;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .card{
+        width: 80%;
+        margin-top: 2rem;
+    }
+}
