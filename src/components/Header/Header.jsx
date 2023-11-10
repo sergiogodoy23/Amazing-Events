@@ -7,13 +7,13 @@ export const Header = () => {
   const location = useLocation()
 
 
-  const navbarStyle = location.pathname === '/stats' || location.pathname=== '/contact' ? { backgroundColor: "#150045"} : { backgroundColor: 'transparent' }
+  const navbarStyle = location.pathname === '/stats' || location.pathname=== '/contact' ? { backgroundColor: "#2c009449"} : { backgroundColor: 'transparent' }
 
   return (
     <header className="head" style={navbarStyle}>
 
 
-    <h1 className='logo'>
+    <h1 className='logo' role='headerElement'>
       <Link to="/">Amazing events</Link>
     </h1>
     

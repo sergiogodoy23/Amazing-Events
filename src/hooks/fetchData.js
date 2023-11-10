@@ -20,7 +20,10 @@ export const fetchData = () => {
       
       
       useEffect(() => {
-        fetchEvents()
+       
+            
+             fetchEvents()
+       
       }, [])
     
 

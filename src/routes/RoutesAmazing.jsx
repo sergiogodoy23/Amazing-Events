@@ -3,31 +3,35 @@ import { Home } from "../pages/Home"
 import { Contact } from "../pages/Contact"
 import { Stats } from "../pages/Stats"
 import { Detail } from "../pages/Detail"
-import { fetchData } from "../hooks/fetchData"
 import { PageNotFound } from "../pages/NotFound"
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import eventsActions from "../store/EventsAction"
 
 
 export const RoutesAmazing = () => {
-      
-        const {data} = fetchData()
+    
+        const dispatch = useDispatch()
+ 
+        useEffect(() => {
+          
+            dispatch(eventsActions.get_events())
+        }, [])
+        
 
-   let upcomingEvents = data.filter(event => event.estimate)
-   let pastEvents = data.filter(event => event.assistance)
+   
 
 
   return (
 
             <Routes>
-                <Route path="/" element={<Home title ="Amazing Events" data={data} />} />
-                <Route path="/upcomingEvents" element={<Home title="Upcoming Events" data={upcomingEvents} />} />
-                <Route path="/pastEvents" element={<Home title="Past Events" data={pastEvents} />} />
+                <Route path="/" element={<Home title ="Amazing Events" />} />
+                <Route path="/upcomingEvents" element={<Home title="Upcoming Events" />} />
+                <Route path="/pastEvents" element={<Home title="Past Events" />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/stats" element={<Stats />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         )
-    
-
-  
 }

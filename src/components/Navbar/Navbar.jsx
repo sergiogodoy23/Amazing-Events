@@ -15,13 +15,13 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar">
-       <div className="bars__menu hamburguer" onClick={handleClick}>
+       <div className="bars__menu hamburguer" role="button" onClick={handleClick}>
           <span className={` ${isActive ? 'activeline1__bars-menu' : ''}`}></span>
           <span className={` ${isActive ? 'activeline2__bars-menu' : ''}`}></span>
           <span className={` ${isActive ? 'activeline3__bars-menu' : ''}`}></span>
       </div>
 
-        <ul className={`nav-items ${isActive ? 'active' : ''}`}>
+        <ul role="list" className={`nav-items ${isActive ? 'active' : ''}`}>
           <li className="nav-link">
           <Link onClick={(active) => setIsActive(!active)} to="/">Home</Link>
           </li>

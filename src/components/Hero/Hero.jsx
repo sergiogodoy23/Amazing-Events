@@ -1,9 +1,9 @@
-import { fetchData } from '../../hooks/fetchData'
+import { useSelector } from 'react-redux'
 import './hero.css'
 
 export const Hero = ({ title}) => {
 
-  const {data} = fetchData()
+  const data = useSelector(store => store.events)
 
   return (
     <section className='container-hero'>

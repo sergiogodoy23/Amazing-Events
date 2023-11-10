@@ -2,7 +2,7 @@ import { Categories } from '../Categories/Categories'
 import './Filters.css'
 
 
-export const Filters = ({onFilter,selectedCategories, handleCategory }) => {
+export const Filters = ({onFilter, handleCategory }) => {
 
 
   const handleChange = (e) => {
@@ -13,14 +13,15 @@ export const Filters = ({onFilter,selectedCategories, handleCategory }) => {
   return (
     <div className="container-filters">
         
-    <Categories selectedCategories={selectedCategories}
+    <Categories 
       handleCategory={handleCategory}
      />
 
     <input className='inputSearch'
      type="text"
+     role='input'
      onChange={handleChange}
-     placeholder='search event' />
+     placeholder='search event &#x1F50E;&#xFE0E;' />
 
     </div>
   )

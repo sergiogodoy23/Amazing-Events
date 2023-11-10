@@ -14,7 +14,7 @@
      grid-gap: 40px;
      padding: 10px 0;
      place-items: center;
-     margin-bottom: 15rem;
+     margin: 2rem;
 }
 
 
@@ -105,6 +105,8 @@ background: linear-gradient(90deg, #30009f 0%, #340159 100%);
     color: #fff;
 
 }
+
+
 
 
 

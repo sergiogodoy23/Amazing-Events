@@ -24,11 +24,7 @@ body{
 
 
   
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
+
 
 .app {
   display: flex;
@@ -83,7 +79,10 @@ background: linear-gradient(to right, #30009F 0%, #340159 100%);
   text-decoration: none;
   color: white;
 }
-
+.contact{
+  width: 100%;
+  min-height: 80vh;
+  }
 
 @media (max-width: 380px) {
   .title-found{

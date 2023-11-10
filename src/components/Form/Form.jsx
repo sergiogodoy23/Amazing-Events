@@ -12,11 +12,6 @@ export const Form = () => {
   }
 
 
-
-
-
-
-
   return (
 
     <div className='contenedor-contact'>

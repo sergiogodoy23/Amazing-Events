@@ -3,9 +3,14 @@ import { fetchData } from '../hooks/fetchData'
 import { DetailCard } from '../components/Detail/DetailCard'
 import '../components/Detail/detailcard.css'
 import EventsLoader from '../components/Detail/EventsLoader'
+import { useSelector } from 'react-redux'
 
 export const Detail = () => {
-  const {data, loading} = fetchData()
+
+
+
+
+  const data = useSelector(store => store.events)
   const {id} = useParams()
 
   const event = data.find( event => event._id == id)
@@ -14,7 +19,7 @@ export const Detail = () => {
   return (
     <div className='container-main'>
     {
-      loading ? <EventsLoader /> : <DetailCard event={event} />
+      data.length == 0 ? <EventsLoader /> : <DetailCard event={event} />
     }
     
     

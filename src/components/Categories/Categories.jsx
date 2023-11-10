@@ -1,24 +1,21 @@
-import { fetchData } from '../../hooks/fetchData'
+import { useSelector } from 'react-redux'
 import './categories.css'
 
-export const Categories = ({selectedCategories, handleCategory}) => {
+export const Categories = ({ handleCategory}) => {
+  
 
-
-  const {data} = fetchData()
-
-  const categories = [...new Set(data.map((item) => item.category))]
-
+  const events = useSelector(state => state.events)
+  const categories = [...new Set(events.map((item) => item.category))]
 
 
   return (
-    <div className='container-categories'>
+    <div role='categories' className='container-categories'>
 
       {
-        categories.map((category, i) => (
-          <label className='label-categorie' key={i} htmlFor={category}>
+        categories.map((category) => (
+          <label className='label-categorie' key={category} htmlFor={category}>
           {category}
           <input 
-          checked={selectedCategories?.includes(category)}
           onChange={() => handleCategory(category)}
             type="checkbox" 
             name={category} 

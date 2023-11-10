@@ -11,7 +11,7 @@ export const Event = ({name, image, description, price, _id}) => {
             <strong className='card-price'>${price}</strong>
         </div>
         <button className='btn-event'>
-          <Link className='link-event' to={`/detail/${_id}`}>Ver mas</Link>
+          <Link  role='buttonElement' className='link-event' to={`/detail/${_id}`}>Ver mas</Link>
         </button>
     </div>
   )

@@ -31,8 +31,6 @@ export const Events = ({ eventsFiltered }) => {
           <MessageError />
         )}
 
-
-
       </section>
     </div>
   );

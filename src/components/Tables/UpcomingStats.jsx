@@ -1,53 +1,63 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./tables.css";
 import { fetchData } from "../../hooks/fetchData";
+import { useSelector } from "react-redux";
 
 export const UpcomingStats = () => {
 
+  const [upcomingStats, setUpcomingStats] = useState([])
 
-  const { data, loading } = fetchData();
 
-  const getData = () => {
-    const categoriesUpcoming = {};
+  const data = useSelector(store => store.events)
 
-    const upcomingEevents = data.filter((event) => event.estimate);
-
-    upcomingEevents.forEach((event) => {
-
-      const { category, price, estimate, capacity } = event;
-
-      if (!categoriesUpcoming[category]) {
-        categoriesUpcoming[category] = {
-          category,
-          price,
-          estimate,
-          capacity,
-          revenues: 0
-        };
-      }
-
+  useEffect(() => {
+    
+    const getData = () => {
+      const categoriesUpcoming = {};
   
-      categoriesUpcoming[category].revenues += price * estimate;
-      categoriesUpcoming[category].estimate += estimate;
-      categoriesUpcoming[category].capacity += capacity;
-    });
+      const upcomingEevents = data.filter((event) => event.estimate);
+  
+      upcomingEevents.forEach((event) => {
+  
+        const { category, price, estimate, capacity } = event;
+  
+        if (!categoriesUpcoming[category]) {
+          categoriesUpcoming[category] = {
+            category,
+            price,
+            estimate,
+            capacity,
+            revenues: 0
+          };
+        }
+  
+    
+        categoriesUpcoming[category].revenues += price * estimate;
+        categoriesUpcoming[category].estimate += estimate;
+        categoriesUpcoming[category].capacity += capacity;
+      });
+  
+      return Object.keys(categoriesUpcoming).map(
+        (category) => categoriesUpcoming[category]
+      );
+    };
+  
+    const events = getData();
+  
+    const percentageEvents = events.map(event => {
+  
+      const percentage = (event.estimate * 100) / event.capacity
+  
+      return {
+          ...event,
+          percentage
+      }
+    })
+      setUpcomingStats(percentageEvents)
+  }, [data])
+  
 
-    return Object.keys(categoriesUpcoming).map(
-      (category) => categoriesUpcoming[category]
-    );
-  };
 
-  const events = getData();
-
-  const percentageEvents = events.map(event => {
-
-    const percentage = (event.estimate * 100) / event.capacity
-
-    return {
-        ...event,
-        percentage
-    }
-  })
 
 
 
@@ -56,7 +66,7 @@ export const UpcomingStats = () => {
       <h2 className="title">Upcoming events statistics by category</h2>
 
 
-      {loading ? (
+      {data.length == 0 ? (
         <h2>cargando</h2>
       ) : (
       <table>
@@ -71,7 +81,7 @@ export const UpcomingStats = () => {
         <tbody>
 
               {       
-              percentageEvents?.map((event) => (
+              upcomingStats.map((event) => (
                   <tr key={event.category}>
                       <td>{event.category}</td>
                       <td>{event.revenues}</td>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const useFilters = (data) => {
+export const useFilters = (allEvents) => {
 
     const [search, setSearch] = useState("")
     const [selectedCategories, setSelectedCategories] = useState([])
@@ -10,25 +10,24 @@ export const useFilters = (data) => {
       setSearch(text)
     }
   
-    const handleCategory = (category) => {
-      if(selectedCategories.includes(category)){
-        setSelectedCategories(selectedCategories.filter(itemCategory => itemCategory !== category))
+    const handleCategory =(category) =>{
+      if (selectedCategories.includes(category)) {
+        setSelectedCategories(selectedCategories.filter( itemCategory => itemCategory !== category))
       }else{
-        let categories = [...selectedCategories, category]
-        setSelectedCategories(categories)
+        setSelectedCategories([...selectedCategories, category])
       }
     }
-   
+
+
     useEffect(() => {
       
-
-      const filtered = data.filter( item => 
-        (selectedCategories.length === 0 || selectedCategories.includes(item.category)) &&
-          (search.trim() === "" || item.name.toLowerCase().includes(search.toLowerCase()))
-        )
-        
+      const filtered = allEvents.filter( item => 
+        (selectedCategories.length === 0 || selectedCategories.includes(item.category)) && 
+        (search.trim() === "" || item.name.toLowerCase().includes(search.toLowerCase()))
+      )
+      
         setFilteredData(filtered)
-    }, [search,selectedCategories, data])
+    }, [search,selectedCategories, allEvents])
 
 
 
@@ -36,7 +35,6 @@ export const useFilters = (data) => {
   return {
     valueSearch,
     handleCategory,
-    selectedCategories,
     filteredData,
   }
 }
