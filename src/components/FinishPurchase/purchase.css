@@ -1,0 +1,47 @@
+
+.container-purchase-finish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+.container-purchase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.container-purchase img{
+   max-width: 250px;
+   max-height: 300px;
+}
+
+
+.text-purchase{
+    color: white;
+    font-size: 2rem;
+}
+
+.btn-purchase{
+    background-color: #30009F;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+    &&:active{
+        transform: scale(.9);
+        transition: all 300ms ease;
+    }
+}
+
+.btn-purchase a{
+    text-decoration: none;
+    color: white;
+}

@@ -13,12 +13,13 @@
     width: 15rem;
     background-color: transparent;
     font-size: 1rem;
-    color: #ffffff;
+    color: black;
     border: none;
 
     /* border-bottom: 1px solid #b9b9b9; */
 
     background: rgba(249, 250, 251, .1);
+    background: #ffffff;
     padding: .5rem 0.75rem;
     border-radius: .5rem;
 
@@ -26,7 +27,7 @@
     
     &&:focus{
         
-        outline: 2px solid #30009f;
+        outline: 4px solid #30009f;
     }
 }
 

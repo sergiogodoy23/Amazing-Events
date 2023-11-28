@@ -7,6 +7,8 @@ import { PageNotFound } from "../pages/NotFound"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import eventsActions from "../store/EventsAction"
+import { Checkout } from "../pages/Checkout"
+import { FinshPurchase } from "../pages/FinshPurchase"
 
 
 export const RoutesAmazing = () => {
@@ -31,6 +33,8 @@ export const RoutesAmazing = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/stats" element={<Stats />} />
                 <Route path="/detail/:id" element={<Detail />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/Purchase" element={<FinshPurchase />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         )

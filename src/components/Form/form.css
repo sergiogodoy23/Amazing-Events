@@ -38,12 +38,13 @@
     }
 }
 
-.form{
+.form-contact{
     width: 50%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
     background-color: white;
+    margin: 0;
 }
 
 .container-input{

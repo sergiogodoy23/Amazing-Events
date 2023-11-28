@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom'
-import { fetchData } from '../hooks/fetchData'
 import { DetailCard } from '../components/Detail/DetailCard'
 import '../components/Detail/detailcard.css'
 import EventsLoader from '../components/Detail/EventsLoader'
@@ -17,7 +16,7 @@ export const Detail = () => {
 
 
   return (
-    <div className='container-main'>
+    <div className='container-main' style={{backgroundImage: `url(${event?.image})`}}>
     {
       data.length == 0 ? <EventsLoader /> : <DetailCard event={event} />
     }

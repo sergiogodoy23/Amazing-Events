@@ -4,6 +4,7 @@ import { Events } from '../components/Eventos/Events'
 import { useFilters } from '../hooks/useFilters'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
+import { Footer } from '../components/footer/Footer'
 
 export const Home = ({ title }) => {
   
@@ -35,7 +36,6 @@ export const Home = ({ title }) => {
       handleCategory={handleCategory }
        />
       <Events eventsFiltered={filteredData} />
-
     </>
   )
 }

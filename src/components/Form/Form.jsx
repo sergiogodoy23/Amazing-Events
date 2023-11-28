@@ -25,7 +25,7 @@ export const Form = () => {
           
         </div>
       </div>
-        <form onSubmit={handleSubmit} className='form'>
+        <form onSubmit={handleSubmit} className='form-contact'>
           <div className='container-input'>
           <label className='label' htmlFor="">
             Name

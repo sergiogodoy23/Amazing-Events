@@ -1,20 +1,24 @@
 
 .detail-container{
-
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     gap: 4rem;
-    max-width: 800px;
-    border-radius: 20px;
-    color: white;
+    max-width: 1000px;
+    color: black;
     background-color: rgb(30, 1, 48);
     backdrop-filter: blur(20px);
-    padding: 2rem;
-    background: linear-gradient(-45deg, #30009f, #010003, #010003, #30009f);
+    padding: 3rem 3rem;
+    /* background: linear-gradient(-45deg, #30009f, #130137, #0e002a, #30009f); */
     box-shadow: -1px 1px 1px 2px #f2f2f20d;
+    background-color: white;
+    position: relative;
+    z-index: 1;
 }
+
 
 
 
@@ -31,54 +35,132 @@
 }
 
 .detail-description{
-    color: #aaa;
+    color: #666;
     padding-top: 1rem;
 }
 
 .detail-date-container{
-    margin-top: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .detail-date{
-    color: white;
-    margin-top: 2rem;
+    color: black;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+
 }
 
 .detail-container-mid{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 1rem;
+    justify-content: space-between;
+    margin: 1rem 0rem;
 }
 
 .detail-category{
-    color: white;
+    color: black;
     font-size: 1.2rem;
 }
 
+.detail-category span{
+    font-size: 1.1rem;
+}
+
 .detail-price{
-    color: white;
+    color: #00a650;
+    font-size: 2rem;
 }
 
 .container-footer{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .5rem;
 }
 
+.quantity-container{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.quantity{
+    width: 4rem;
+    height: 2rem;
+    color: #666;
+}
+
+.btn-detail {
+    width: 50%;
+    padding: 10px 10px;
+    border: none;
+    color: #fff;
+    background-color: #3b0261;
+    background: rgb(57,10,122);
+    background: linear-gradient(90deg, #30009f 0%, #340159 100%);
+    background: #1e0064;
+    background:linear-gradient(90deg,#03045eff,#363088);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+
+    &&:hover{
+        background: linear-gradient(90deg, #270083 0%, #260041 100%);
+        cursor: pointer;
+
+    }
+
+    &&:active{
+        background: linear-gradient(90deg, #1e0065 0%, #260041 100%);
+        cursor: pointer;
+    }
+
+}
+.btn-detail-soldout {
+    width: 50%;
+    padding: 10px 10px;
+    border: none;
+    color: #fff;
+    background: rgb(191, 1, 1);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+
+    &&:hover{
+        background: rgb(170, 0, 0);
+        cursor: pointer;
+
+    }
+
+    &&:active{
+        background: rgb(170, 0, 0);
+        cursor: pointer;
+    }
+
+}
 
 .place-detail{
-    color: white;
+    color: black;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
-.place-detail{
-    color: white;
-    font-size: 1.2rem;
-}
+
 
 .capacity-detail{
-    color: white;
+    color: black;
 }
 
 .detail-image{
@@ -86,45 +168,28 @@
 }
 
 .container-main{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    min-height: 70vh;
+    min-height: 100vh;
     overflow: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+  &&::after{
+    -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px); 
+  background-color: rgba(0, 0, 0, 0.609);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0;
+  }
 }
 
 
-@media (max-width: 800px) {
-    .detail-container{
-        flex-wrap: wrap;
-        max-width: 80%;
-        margin-top: 2rem;
-    }
-}
-@media (max-width: 600px) {
-
-    .detail-container{
-        gap: 2rem;
-        margin-top: 4rem;
-    }
-
-
-    .detail-name{
-        font-size: 1.5rem;
-    }
-
-    .detail-image{
-        max-width: 250px;
-    }
-
-    .detail-container-mid{
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .container-footer{
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
