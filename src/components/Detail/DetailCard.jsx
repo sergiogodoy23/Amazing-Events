@@ -52,7 +52,7 @@ export const DetailCard = ({event}) => {
                 </div>
                 <div className='container-footer'>
                     <div className='quantity-container'>
-                    <label>quantity:</label>
+                    <label className='label-quantity'>quantity:</label>
                     <select name="quantity" className='quantity' onChange={handleChange}>
                         <option value="1">1</option>
                         <option value="2">2</option>

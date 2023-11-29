@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux"
 import eventsActions from "../store/EventsAction"
 import { Checkout } from "../pages/Checkout"
 import { FinshPurchase } from "../pages/FinshPurchase"
+import { Login } from "../pages/Login"
+import { Register } from "../pages/Register"
 
 
 export const RoutesAmazing = () => {
@@ -31,6 +33,8 @@ export const RoutesAmazing = () => {
                 <Route path="/upcomingEvents" element={<Home title="Upcoming Events" />} />
                 <Route path="/pastEvents" element={<Home title="Past Events" />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/stats" element={<Stats />} />
                 <Route path="/detail/:id" element={<Detail />} />
                 <Route path="/checkout" element={<Checkout />} />

@@ -45,7 +45,7 @@ export const ModalCart = ({setOpenCart}) => {
                         <img className='cart-event-image'  src={event.image} />
                         <div className='container-text'>
                             <p className='event-cart-name'>{event.name}</p>
-                            <strong>${event.price}</strong>
+                            <strong className='cart-price-item'>${event.price}</strong>
                         </div>
                         <div className='container-buttons-event'>
                             <button onClick={() => dispatch(removeFromCart(event._id))}>
@@ -76,13 +76,15 @@ export const ModalCart = ({setOpenCart}) => {
             </div>
             <hr />
             <div className='container-btn-cart'>
-
-             <button
-             className="btn-cart"
-            
-             > 
-             <Link to="/checkout">iniciar Compra</Link>
-             </button>
+            <Link to="/checkout">
+                <button
+                disabled={cart.length === 0}
+                className="btn-cart"
+                    style={{opacity: `${cart.length == 0 ?".4" : "1"}`, cursor: `${cart.length === 0 ? "no-drop" : "pointer"}`}}
+                > 
+                    iniciar Compra
+                </button>
+             </Link>
             </div>
         </div>
 

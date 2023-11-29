@@ -105,6 +105,11 @@
     object-fit: contain;
 }
 
+.cart-price-item{
+    color: black;
+}
+
+
 .container-buttons-event{
     display: flex;
     justify-content: center;

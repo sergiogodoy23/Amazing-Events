@@ -13,7 +13,7 @@ export const Hero = ({ title}) => {
 
         <div className='container-images'>
           {
-            data.slice(0,3).map(event => (
+            data.slice(0, 3).map(event => (
              <img key={event._id} className='images' src={event.image} />
             ))
           }

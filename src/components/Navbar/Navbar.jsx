@@ -49,7 +49,9 @@ export const Navbar = () => {
           <Link onClick={(active) => setIsActive(!active)} to="/contact">Contact</Link> 
           </li>
           <li>
-            <FaUser color="white" fontSize={20} />
+          <Link onClick={(active) => setIsActive(!active)} to="/login"> <FaUser color="white" fontSize={20} /></Link> 
+
+           
           </li>
           
           <li className="cart-icon">
